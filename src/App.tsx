@@ -5,6 +5,7 @@ import { Pillars } from './components/Pillars'
 import { About } from './components/About'
 import { HowItWorks } from './components/HowItWorks'
 import { ContentSection } from './components/ContentSection'
+import { Store } from './components/Store'
 import { ApplySection } from './components/ApplicationForm'
 import { FAQ } from './components/FAQ'
 import { Footer } from './components/Footer'
@@ -21,6 +22,7 @@ export default function App() {
         <About />
         <HowItWorks />
         <ContentSection />
+        <Store />
         <ApplySection />
         <FAQ />
         <section className="cta-band">

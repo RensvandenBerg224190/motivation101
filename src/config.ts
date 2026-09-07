@@ -29,6 +29,25 @@ export const SOCIALS = {
   facebook: 'https://www.facebook.com/joe.hawley.165',
 } as const
 
+/**
+ * Store products. checkoutUrl points at Joe's Gumroad product; Gumroad
+ * handles payment, VAT, and instant PDF delivery, so the static site
+ * needs zero backend. Swap the URL here if the store moves elsewhere.
+ */
+export const STORE = {
+  ebook: {
+    title: 'The First 90 Days: Sober & Strong',
+    tagline: 'The no-BS playbook to quit drinking, build real strength, and take your life back.',
+    price: '$29',
+    cover: '/images/ebook-first90-cover.jpg',
+    checkoutUrl: 'https://theebigjoe.gumroad.com/l/first90',
+  },
+  comingSoon: {
+    title: 'Motivation 101: The Daily Playbook',
+    tagline: 'Routines, standards, and the daily habits behind the discipline.',
+  },
+} as const
+
 export const REELS = [
   {
     quote: 'Pray as hard as you train',
