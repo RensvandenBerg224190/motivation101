@@ -19,7 +19,7 @@ export function Footer() {
           </a>
         </div>
         <p className="footer-note">
-          © {new Date().getFullYear()} Motivation 101 — Remote coaching by Joe Hawley. Get sober.
+          © {new Date().getFullYear()} Motivation 101 · Remote coaching by Joe Hawley. Get sober.
           Get stronger. Get confident.
         </p>
       </div>

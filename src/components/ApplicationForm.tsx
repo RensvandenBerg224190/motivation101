@@ -69,21 +69,21 @@ export function ApplicationForm() {
   const validate = (s: number): string => {
     switch (s) {
       case 0:
-        return answers.goal.trim() ? '' : 'Tell Joe your #1 goal — one honest sentence is enough.'
+        return answers.goal.trim() ? '' : 'Tell me your #1 goal. One honest sentence is enough.'
       case 1:
-        return answers.obstacles.trim() ? '' : 'Be honest — what’s really holding you back?'
+        return answers.obstacles.trim() ? '' : 'Be honest. What’s really holding you back?'
       case 2:
-        return answers.ninetyDays.trim() ? '' : 'Give it a shot — where do you want to be in 90 days?'
+        return answers.ninetyDays.trim() ? '' : 'Give it a shot. Where do you want to be in 90 days?'
       case 3:
         return answers.fitnessLevel ? '' : 'Pick the option that fits best.'
       case 4:
-        return answers.seriousness ? '' : 'Pick a number — no wrong answers, just honest ones.'
+        return answers.seriousness ? '' : 'Pick a number. No wrong answers, just honest ones.'
       case 5:
         return answers.invest ? '' : 'Pick one.'
       case 6:
-        if (!answers.name.trim()) return 'Your name is required so Joe knows who he’s talking to.'
+        if (!answers.name.trim()) return 'I need your name so I know who I’m talking to.'
         if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(answers.email.trim()))
-          return 'A valid email is required so Joe can reach you.'
+          return 'I need a valid email so I can reach you.'
         return ''
       default:
         return ''
@@ -111,17 +111,17 @@ export function ApplicationForm() {
 
   const submit = async () => {
     setStatus('submitting')
-    const contact = `[Contact: ${answers.name.trim()} — ${answers.email.trim()}${
-      answers.phone.trim() ? ' — ' + answers.phone.trim() : ''
+    const contact = `[Contact: ${answers.name.trim()}, ${answers.email.trim()}${
+      answers.phone.trim() ? ', ' + answers.phone.trim() : ''
     }]`
     const body = new URLSearchParams({
       [FORM_ENTRIES.goal]: `${answers.goal.trim()} ${contact}`,
       [FORM_ENTRIES.obstacles]: answers.obstacles.trim(),
       [FORM_ENTRIES.ninetyDays]: answers.ninetyDays.trim(),
       [FORM_ENTRIES.fitnessLevel]: answers.fitnessDetail.trim()
-        ? `${answers.fitnessLevel} — ${answers.fitnessDetail.trim()}`
+        ? `${answers.fitnessLevel}. ${answers.fitnessDetail.trim()}`
         : answers.fitnessLevel,
-      [FORM_ENTRIES.seriousness]: `${answers.seriousness}/10 — ${SERIOUSNESS_CAPTIONS[answers.seriousness!]}`,
+      [FORM_ENTRIES.seriousness]: `${answers.seriousness}/10 (${SERIOUSNESS_CAPTIONS[answers.seriousness!]})`,
       [FORM_ENTRIES.invest]: answers.invest,
       pageHistory: '0,1',
     })
@@ -182,7 +182,7 @@ export function ApplicationForm() {
           </div>
           <h3>Application received</h3>
           <p>
-            Joe personally reviews every application and will reach out within 24–48 hours to
+            I personally review every application and I’ll reach out within 24 to 48 hours to
             schedule your intro call. Stay ready.
           </p>
           <div className="content-ctas">
@@ -222,8 +222,8 @@ export function ApplicationForm() {
               <span className="q-label">It’s game time.</span>
               <p className="q-help">
                 This isn’t about quick fixes, excuses, or waiting for motivation to appear. Answer
-                the questions below honestly — your answers help Joe determine whether coaching is a
-                good fit for you. Takes about 3 minutes.
+                the questions below honestly. Your answers help me decide whether coaching is a good
+                fit for you. Takes about 3 minutes.
               </p>
               <button type="button" className="btn btn-primary btn-lg" onClick={() => go(0)}>
                 Start my application
@@ -253,7 +253,7 @@ export function ApplicationForm() {
               <label className="q-label" htmlFor="obstacles">
                 What’s holding you back from reaching that goal?
               </label>
-              <p className="q-help">The biggest things. Be straight — Joe reads every word.</p>
+              <p className="q-help">The biggest things. Be straight. I read every word.</p>
               <textarea
                 id="obstacles"
                 className="textarea"
@@ -285,7 +285,7 @@ export function ApplicationForm() {
           {step === 3 && (
             <motion.div key="q3" {...motionProps}>
               <span className="q-label">How would you describe your current fitness level?</span>
-              <p className="q-help">No wrong answer — this just shapes your programming.</p>
+              <p className="q-help">No wrong answer. This just shapes your programming.</p>
               <div className="chips" role="radiogroup" aria-label="Current fitness level">
                 {FITNESS_LEVELS.map((level) => (
                   <button
@@ -342,7 +342,7 @@ export function ApplicationForm() {
               <span className="q-label">
                 Are you financially prepared to invest in yourself through professional coaching?
               </span>
-              <p className="q-help">Coaching is an investment — in your body, your mind, and your future.</p>
+              <p className="q-help">Coaching is an investment in your body, your mind, and your future.</p>
               <div className="yesno" role="radiogroup" aria-label="Ready to invest">
                 {(['Yes', 'No'] as const).map((opt) => (
                   <button
@@ -362,8 +362,8 @@ export function ApplicationForm() {
 
           {step === 6 && (
             <motion.div key="q6" {...motionProps}>
-              <span className="q-label">Where can Joe reach you?</span>
-              <p className="q-help">He’ll get back to you personally within 24–48 hours.</p>
+              <span className="q-label">Where can I reach you?</span>
+              <p className="q-help">I’ll get back to you personally within 24 to 48 hours.</p>
               <label className="field-label" htmlFor="name">
                 Name
               </label>
@@ -406,7 +406,7 @@ export function ApplicationForm() {
         <p className="form-error" role="alert" aria-live="polite">
           {error ||
             (status === 'failed'
-              ? 'Something went wrong sending your application. Please try again — or apply directly via the form link below.'
+              ? 'Something went wrong sending your application. Please try again, or apply directly via the form link below.'
               : '')}
         </p>
 
@@ -454,8 +454,8 @@ export function ApplySection() {
           <p className="eyebrow">Motivation 101</p>
           <h2 className="display display-lg">Coaching application</h2>
           <p className="lede" style={{ marginTop: '1.25rem' }}>
-            Ready to get sober, stronger, and confident? Apply below — this is the exact
-            application Joe uses to decide who he works with.
+            Ready to get sober, stronger, and confident? Apply below. I read every application
+            myself.
           </p>
         </Reveal>
         <Reveal delay={0.1}>

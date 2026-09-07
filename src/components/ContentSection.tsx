@@ -9,7 +9,7 @@ export function ContentSection() {
           <p className="eyebrow">Daily Fuel</p>
           <h2 className="display display-lg">No days off.</h2>
           <p className="lede" style={{ marginTop: '1.25rem' }}>
-            Joe posts daily fuel for the disciplined life — straight talk on training, sobriety, and
+            I post daily fuel for the disciplined life. Straight talk on training, sobriety, and
             faith.
           </p>
         </Reveal>

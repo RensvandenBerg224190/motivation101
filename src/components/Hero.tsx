@@ -1,9 +1,12 @@
-import { motion, useReducedMotion } from 'motion/react'
+import { motion, useReducedMotion, useScroll, useTransform } from 'motion/react'
 
 const spring = { type: 'spring', bounce: 0, duration: 0.8 } as const
 
 export function Hero() {
   const reduced = useReducedMotion()
+  const { scrollY } = useScroll()
+  // Subtle parallax: Joe rises slightly as you scroll down the hero.
+  const photoY = useTransform(scrollY, [0, 700], [0, -60])
 
   const rise = (delay: number) => ({
     initial: reduced ? { opacity: 0 } : { opacity: 0, y: 34 },
@@ -14,7 +17,25 @@ export function Hero() {
   return (
     <section className="hero" id="top">
       <div className="hero-bg" aria-hidden="true" />
-      <div className="container">
+
+      <motion.div
+        className="hero-photo-wrap"
+        aria-hidden="true"
+        style={reduced ? undefined : { y: photoY }}
+      >
+        <motion.img
+          className="hero-photo"
+          src="/images/joe-cutout.jpg"
+          alt=""
+          initial={reduced ? { opacity: 0 } : { opacity: 0, y: 56, scale: 0.985 }}
+          animate={reduced ? { opacity: 1 } : { opacity: 1, y: 0, scale: 1 }}
+          transition={
+            reduced ? { duration: 0.4, delay: 0.2 } : { ...spring, duration: 1, delay: 0.3 }
+          }
+        />
+      </motion.div>
+
+      <div className="container hero-content">
         <motion.div className="hero-kicker" {...rise(0)}>
           <img
             src="/images/joe-hq.jpg"
@@ -23,7 +44,7 @@ export function Hero() {
             height={40}
             style={{ objectPosition: 'top' }}
           />
-          <span>@theebigjoe — 1-on-1 remote coaching</span>
+          <span>@theebigjoe · 1-on-1 remote coaching</span>
         </motion.div>
 
         <motion.h1 className="display display-xl" {...rise(0.08)}>
@@ -35,8 +56,9 @@ export function Hero() {
         </motion.h1>
 
         <motion.p className="lede" {...rise(0.18)}>
-          Remote coaching with Joe Hawley. No quick fixes, no waiting for motivation to show up —
-          discipline, strength, faith, and real accountability, wherever you train.
+          I&rsquo;m Joe Hawley. I coach men to get sober, stronger, and confident. No quick fixes,
+          no waiting for motivation. Discipline, strength, faith, and real accountability, wherever
+          you train.
         </motion.p>
 
         <motion.div className="hero-ctas" {...rise(0.26)}>

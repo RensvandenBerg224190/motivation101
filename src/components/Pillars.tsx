@@ -4,19 +4,19 @@ const PILLARS = [
   {
     num: '01',
     title: 'Faith',
-    body: "Train the body, feed the spirit. Joe's coaching is built on something bigger than a meal plan — purpose, prayer, and peace under pressure.",
-    verse: '“The hardship of discipline produces righteousness and peace.” — Hebrews 12:11',
+    body: 'Train the body, feed the spirit. My coaching is built on something bigger than a meal plan: purpose, prayer, and peace under pressure.',
+    verse: '“The hardship of discipline produces righteousness and peace.” (Hebrews 12:11)',
   },
   {
     num: '02',
     title: 'Fitness',
-    body: 'Custom strength programming built around your body, your schedule, and the equipment you actually have — commercial gym or garage. Strong for life, not just for the mirror.',
+    body: 'I build your strength program around your body, your schedule, and the equipment you actually have. Commercial gym or garage. Strong for life, not just for the mirror.',
     verse: null,
   },
   {
     num: '03',
     title: 'Discipline',
-    body: 'Sobriety, structure, and daily standards. Weekly check-ins, honest conversations, and zero room for excuses. Motivation fades — discipline doesn’t.',
+    body: 'Sobriety, structure, and daily standards. Weekly check-ins, honest conversations, and zero room for excuses. Motivation fades. Discipline doesn’t.',
     verse: null,
   },
 ]

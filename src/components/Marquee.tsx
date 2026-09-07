@@ -6,7 +6,7 @@ const QUOTES = [
   'Money is not the problem.',
   'Life is short.',
   'Do better.',
-  "It's Monday — set the pace.",
+  "It's Monday. Set the pace.",
 ]
 
 export function Marquee() {

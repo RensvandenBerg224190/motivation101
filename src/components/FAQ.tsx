@@ -5,27 +5,27 @@ import { Reveal } from './Reveal'
 const ITEMS = [
   {
     q: 'How does remote coaching work?',
-    a: 'Everything runs through your phone: a custom training plan, weekly check-ins, and direct access to Joe for accountability. It works whether you train in a commercial gym, a garage, or on the road.',
+    a: 'Everything runs through your phone: a custom training plan, weekly check-ins, and direct access to me for accountability. It works whether you train in a commercial gym, a garage, or on the road.',
   },
   {
     q: 'Do I need a gym membership?',
-    a: 'No. Your program is built around the equipment you actually have access to. Barbells, dumbbells, bands, or bodyweight — the standard stays the same.',
+    a: 'No. I build your program around the equipment you actually have access to. Barbells, dumbbells, bands, or bodyweight. The standard stays the same.',
   },
   {
     q: 'I’m a complete beginner. Is this for me?',
-    a: 'That’s exactly what the application is for. Joe coaches all levels — the only requirement is that you’re serious about changing your life.',
+    a: 'That’s exactly what the application is for. I coach all levels. The only requirement is that you’re serious about changing your life.',
   },
   {
-    q: 'Does Joe help with sobriety?',
-    a: 'Yes. Getting sober — and staying sober — is a core pillar of Motivation 101. You get structure, accountability, and a coach who holds the line with you every single day.',
+    q: 'Do you help with sobriety?',
+    a: 'Yes. Getting sober and staying sober is a core pillar of Motivation 101. You get structure, accountability, and a coach who holds the line with you every single day.',
   },
   {
     q: 'What does coaching cost?',
     a: 'Pricing depends on the level of coaching you need and is discussed on your intro call. The application asks one honest question up front: are you ready to invest in yourself?',
   },
   {
-    q: 'How do I schedule a call with Joe?',
-    a: 'Submit the application below. Joe reviews every application personally and reaches out within 24–48 hours to schedule your intro call.',
+    q: 'How do I schedule a call with you?',
+    a: 'Submit the application above. I review every application personally and reach out within 24 to 48 hours to schedule your intro call.',
   },
 ]
 

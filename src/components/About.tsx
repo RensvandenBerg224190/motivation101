@@ -6,7 +6,7 @@ export function About() {
       <div className="container about-grid">
         <Reveal>
           <figure className="about-photo" style={{ margin: 0 }}>
-            <img src="/images/joe-hq.jpg" alt="Joe Hawley — @theebigjoe" />
+            <img src="/images/joe-hq.jpg" alt="Joe Hawley (@theebigjoe)" />
             <figcaption>@theebigjoe</figcaption>
           </figure>
         </Reveal>
@@ -14,18 +14,18 @@ export function About() {
           <p className="eyebrow">Your Coach</p>
           <h2 className="display display-lg">Meet Joe Hawley</h2>
           <p className="lede" style={{ marginTop: '1.5rem' }}>
-            They call him Theebigjoe for a reason: 6&rsquo;9&rdquo;, 285 pounds, and impossible to
-            out-excuse. Joe coaches men who are done waiting — men who want to get sober, get
+            They call me Theebigjoe for a reason: 6&rsquo;9&rdquo;, 285 pounds, and I don&rsquo;t
+            accept excuses. I coach men who are done waiting. Men who want to get sober, get
             stronger, and walk into every room with confidence.
           </p>
           <p className="lede" style={{ marginTop: '1rem' }}>
             This isn&rsquo;t about quick fixes or waiting for motivation to appear. It&rsquo;s about
-            building discipline, confidence, strength, accountability, and consistency — and
-            becoming the man you know you&rsquo;re capable of becoming.
+            building discipline, confidence, strength, accountability, and consistency. And becoming
+            the man you know you&rsquo;re capable of becoming.
           </p>
           <blockquote className="about-quote">
             “We all get 24 hours. Outwork everybody.”
-            <cite>— Joe Hawley</cite>
+            <cite>Joe Hawley</cite>
           </blockquote>
           <div className="about-tags">
             <span className="tag">Sobriety</span>

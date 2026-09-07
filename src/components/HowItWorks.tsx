@@ -3,15 +3,15 @@ import { Reveal } from './Reveal'
 const STEPS = [
   {
     title: 'Apply',
-    body: 'Fill out the Motivation 101 application below. Honest answers only — it takes three minutes.',
+    body: 'Fill out the Motivation 101 application below. Honest answers only. It takes three minutes.',
   },
   {
     title: 'Talk it out',
-    body: 'Joe personally reviews every application. If it’s a fit, he reaches out within 24–48 hours to schedule your intro call and map out your plan.',
+    body: 'I personally review every application. If it’s a fit, I reach out within 24 to 48 hours to schedule your intro call and map out your plan.',
   },
   {
     title: 'Do the work',
-    body: 'Custom training, weekly check-ins, and 24/7 accountability. You show up, Joe keeps you honest.',
+    body: 'Custom training, weekly check-ins, and 24/7 accountability. You show up. I keep you honest.',
   },
 ]
 
