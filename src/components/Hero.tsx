@@ -5,8 +5,10 @@ const spring = { type: 'spring', bounce: 0, duration: 0.8 } as const
 export function Hero() {
   const reduced = useReducedMotion()
   const { scrollY } = useScroll()
-  // Subtle parallax: Joe rises slightly as you scroll down the hero.
-  const photoY = useTransform(scrollY, [0, 700], [0, -60])
+  // Photo is hidden at the top; it fades in and rises up once you start
+  // scrolling, then keeps drifting up slightly (parallax) as you go deeper.
+  const photoOpacity = useTransform(scrollY, [40, 280], [0, 1])
+  const photoY = useTransform(scrollY, [0, 280, 800], [90, 0, -60])
 
   const rise = (delay: number) => ({
     initial: reduced ? { opacity: 0 } : { opacity: 0, y: 34 },
@@ -21,18 +23,9 @@ export function Hero() {
       <motion.div
         className="hero-photo-wrap"
         aria-hidden="true"
-        style={reduced ? undefined : { y: photoY }}
+        style={reduced ? { opacity: photoOpacity } : { opacity: photoOpacity, y: photoY }}
       >
-        <motion.img
-          className="hero-photo"
-          src="/images/joe-cutout.jpg"
-          alt=""
-          initial={reduced ? { opacity: 0 } : { opacity: 0, y: 56, scale: 0.985 }}
-          animate={reduced ? { opacity: 1 } : { opacity: 1, y: 0, scale: 1 }}
-          transition={
-            reduced ? { duration: 0.4, delay: 0.2 } : { ...spring, duration: 1, delay: 0.3 }
-          }
-        />
+        <img className="hero-photo" src="/images/joe-cutout.jpg" alt="" />
       </motion.div>
 
       <div className="container hero-content">
