@@ -6,7 +6,7 @@ export function About() {
       <div className="container about-grid">
         <Reveal>
           <figure className="about-photo" style={{ margin: 0 }}>
-            <img src="/images/joe-avatar.jpg" alt="Joe Hawley — @theebigjoe" />
+            <img src="/images/joe-hq.jpg" alt="Joe Hawley — @theebigjoe" />
             <figcaption>@theebigjoe</figcaption>
           </figure>
         </Reveal>

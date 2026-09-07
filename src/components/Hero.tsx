@@ -16,7 +16,13 @@ export function Hero() {
       <div className="hero-bg" aria-hidden="true" />
       <div className="container">
         <motion.div className="hero-kicker" {...rise(0)}>
-          <img src="/images/joe-avatar.jpg" alt="Joe Hawley" width={40} height={40} />
+          <img
+            src="/images/joe-hq.jpg"
+            alt="Joe Hawley"
+            width={40}
+            height={40}
+            style={{ objectPosition: 'top' }}
+          />
           <span>@theebigjoe — 1-on-1 remote coaching</span>
         </motion.div>
 
