@@ -30,6 +30,12 @@ export const SOCIALS = {
 } as const
 
 /**
+ * Flip to true when Gumroad checkout is ready. Store section, nav link,
+ * and product files stay in the repo either way.
+ */
+export const STORE_LIVE = false
+
+/**
  * Store products. checkoutUrl points at Joe's Gumroad product; Gumroad
  * handles payment, VAT, and instant PDF delivery, so the static site
  * needs zero backend. Swap the URL here if the store moves elsewhere.

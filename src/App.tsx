@@ -7,6 +7,7 @@ import { HowItWorks } from './components/HowItWorks'
 import { ContentSection } from './components/ContentSection'
 import { Store } from './components/Store'
 import { ApplySection } from './components/ApplicationForm'
+import { STORE_LIVE } from './config'
 import { FAQ } from './components/FAQ'
 import { Footer } from './components/Footer'
 import { Reveal } from './components/Reveal'
@@ -22,7 +23,7 @@ export default function App() {
         <About />
         <HowItWorks />
         <ContentSection />
-        <Store />
+        {STORE_LIVE ? <Store /> : null}
         <ApplySection />
         <FAQ />
         <section className="cta-band">

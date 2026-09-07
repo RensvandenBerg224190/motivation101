@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { STORE_LIVE } from '../config'
 
 export function Nav() {
   const [scrolled, setScrolled] = useState(false)
@@ -20,7 +21,7 @@ export function Nav() {
           <a href="#coaching">Coaching</a>
           <a href="#about">About Joe</a>
           <a href="#content">Content</a>
-          <a href="#store">Store</a>
+          {STORE_LIVE ? <a href="#store">Store</a> : null}
           <a href="#faq">FAQ</a>
           <a href="#apply" className="btn btn-primary">
             Apply Now
